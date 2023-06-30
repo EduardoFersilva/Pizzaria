@@ -231,10 +231,6 @@ a
 
 @media (max-width: 590px)
     .copyright
-        width: 400px
-
-@media (max-width: 320px)
-    .copyright
         width: 300px
 
 </style>

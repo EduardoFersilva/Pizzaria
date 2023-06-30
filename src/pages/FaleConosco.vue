@@ -270,7 +270,7 @@ p
     .card-body
       align-items: center
   .input-group
-    width: 350px
+    width: 300px
     margin-right: 30px
   .send
     flex-direction: column
@@ -303,5 +303,9 @@ p
   .textarea
     width: 300px
     border-radius: 10px
+
+@media (max-width: 335px)
+  .divInputDados
+    width: 300px
 
 </style>

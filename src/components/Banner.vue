@@ -38,7 +38,7 @@ defineProps({
 </script>
 
 <template>
-        <div class="banner">
+        <div class="banner" >
 
             <div class="container">
                 <h1>{{ title }}</h1>
@@ -63,12 +63,8 @@ defineProps({
                     </div>
 
                 </div>
-    </div>
-
+            </div>
             <img :src="imageUrl" class="imgPizzaBanner" :alt="title">
-        </div>
-        <div class="Banner2">
-        <img src="../../public/imgs/imgBanner.jpeg" class="imgBanner" alt="">
 
         </div>
 </template>
@@ -85,19 +81,17 @@ export default {
     display: flex
     justify-content: center
     align-items: center
-    position: absolute
     width: 100%
     height: 700px
-    background: linear-gradient(90deg, rgba(51, 0, 0, 0.7) 0%, rgba(112, 54, 6, 0.3) 50%, rgba(0, 0, 0, 0.8) 100%)
+    background-image: url('../../public/imgs/imgBanner.jpeg')
+    background-repeat: no-repeat
+    background-size: cover
+    opacity: 0.9
     z-index: 2
-.imgBanner
-    width: 100%
-    height: 700px
-    z-index: 1
-    opacity: 0.8
+
 .container
     margin: 0 150px 0 50px
-    width: 600px
+    max-width: 550px
 
 h1
     font-family: 'Roboto'
@@ -121,6 +115,7 @@ p
     font-weight: 400
     font-size: 16px
     color: #FFFFFF
+    max-width: 500px
 .btnFazerPedido
     width: 200px
     height: 50px
@@ -161,8 +156,6 @@ p
     .banner
         flex-direction: column
         height: 950px
-    .imgBanner
-        height: 950px
     .imgPizzaBanner
         order: -1
         width: 350px
@@ -183,22 +176,21 @@ p
 @media (max-width: 580px)
     h2
         font-size: 60px
-    p
-        margin: 0 100px
     .btnFazerPedido
         margin-top: 30px
+
+@media (max-width: 400px)
+     .imgPizzaBanner
+        width: 250px
+        height: 200px
 
 @media (max-width: 380px)
     h2
         font-size: 50px
-    p
-        margin: 0 120px
 
 @media (max-width: 320px)
     .imgPizzaBanner
         width: 300px
         height: 200px
 
-    p
-        margin: 0 130px
 </style>

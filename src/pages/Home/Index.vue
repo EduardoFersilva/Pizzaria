@@ -70,6 +70,7 @@ import BannerEnd from '../../components/BannerEnd.vue'
 </template>
 
 <script>
+
 export default {
   components: {
     Revenue,

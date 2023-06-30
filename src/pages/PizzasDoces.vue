@@ -159,13 +159,15 @@ h2
   .receita
       padding: 500px 0 !important
 
-@media (max-width: 385px)
+@media (max-width: 415px)
   .texts
     padding: 30px 0
 
-@media (max-width: 330px)
+@media (max-width: 355px)
   .divBusca
     input
       width: 190px
+  .cards
+    margin: 30px 0
 
 </style>
