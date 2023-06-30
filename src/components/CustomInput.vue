@@ -1,4 +1,6 @@
 <script setup>
+import {defineEmits, defineProps} from 'vue'
+
 defineEmits(['update:modelValue'])
 defineProps({
   label: {
@@ -24,21 +26,26 @@ defineProps({
   width: {
     type: String,
     default: ''
+  },
+  required: {
+    type: Boolean,
+    default: false
   }
 })
 </script>
 
 <template>
-    <div class="inputGroup">
-        <label>{{ label }}</label>
-        <input
-            :style="{ background: background, width: width }"
-            :value="modelValue"
-            :type="type"
-            :placeholder="placeholder"
-            @input="onInput"
-        />
-    </div>
+  <div class="inputGroup">
+    <label>{{ label }}</label>
+    <input
+      :style="{ background: background, width: width }"
+      :value="modelValue"
+      :type="type"
+      :placeholder="placeholder"
+      :required="required"
+      @input="onInput"
+    />
+  </div>
 </template>
 
 <style lang="sass" scoped>

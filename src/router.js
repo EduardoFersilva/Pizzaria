@@ -19,6 +19,8 @@ import CardapioSingle from './pages/CardapioSingle.vue'
 import Pedidos from './pages/Pedidos.vue'
 import EntregaPagamento from './pages/EntregaPagamento.vue'
 
+import PoliticaPrivacidade from './pages/PoliticaPrivacidade.vue'
+
 const routes = [
   {path: '/', component: Index},
   {path: '/sobre', component: Sobre},
@@ -37,7 +39,8 @@ const routes = [
   {path: '/cardapio-single', component: CardapioSingle},
 
   {path: '/pedidos', component: Pedidos},
-  {path: '/entregapagamento', component: EntregaPagamento}
+  {path: '/entregapagamento', component: EntregaPagamento},
+  {path: '/politica-e-peivacidade', component: PoliticaPrivacidade}
 ]
 
 const router = createRouter({

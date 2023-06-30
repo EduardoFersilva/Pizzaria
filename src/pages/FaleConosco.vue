@@ -34,6 +34,7 @@
       placeholder=""
       :background="'#F7F1E8'"
       :width="'350px'"
+      :required="true"
       />
 
       <custom-input
@@ -42,6 +43,7 @@
       placeholder=""
       :background="'#F7F1E8'"
       :width="'350px'"
+      :required="true"
       />
 
       <custom-input
@@ -50,13 +52,17 @@
       placeholder=""
       :background="'#F7F1E8'"
       :width="'350px'"
+      :required="true"
       />
       </div>
         <div class="textarea">
             <h2>Mensagem</h2>
             <div class="input-group">
-                <textarea class="form-control" aria-label="With textarea"
-                placeholder=""></textarea>
+                <textarea class="form-control"
+                aria-label="With textarea"
+                placeholder=""
+                :required="true">
+              </textarea>
             </div>
         </div>
 
@@ -64,6 +70,58 @@
           <p>contato@senhorapizza.com.br</p>
           <a type="button" class="btn btnEnviar">ENVIAR</a>
         </div>
+
+    </div>
+  </div>
+  </div>
+
+    <div class="divFormMobile">
+  <div class="card">
+    <div class="card-body">
+
+      <div class="divInputDados">
+      <custom-input
+      label="Nome Completo"
+      type="text"
+      placeholder=""
+      :background="'#F7F1E8'"
+      :width="'280px'"
+      :required="true"
+      />
+
+      <custom-input
+      label="Telefone "
+      type="number"
+      placeholder=""
+      :background="'#F7F1E8'"
+      :width="'280px'"
+      :required="true"
+      />
+
+      <custom-input
+      label="Email"
+      type="email"
+      placeholder=""
+      :background="'#F7F1E8'"
+      :width="'280px'"
+      :required="true"
+      />
+      </div>
+        <div class="textarea">
+            <h2>Mensagem</h2>
+            <div class="input-group">
+                <textarea class="form-controlMobile"
+                aria-label="With textarea"
+                placeholder=""
+                :required="true">
+              </textarea>
+            </div>
+        </div>
+
+        <div class="send">
+      <p>contato@senhorapizza.com.br</p>
+      <a type="button" class="btn btnEnviar" @click="enviarFormulario">ENVIAR</a>
+    </div>
 
     </div>
   </div>
@@ -77,6 +135,11 @@ export default {
   name: 'FaleConosno',
   components: {
     CustomInput
+  },
+  methods: {
+    enviarFormulario() {
+      console.log('Formulário enviado com sucesso!')
+    }
   }
 }
 </script>
@@ -134,6 +197,15 @@ p
     line-height: 23px
     letter-spacing: 0em
     color: #DF3D29
+.divFormMobile
+  display: none
+
+  .card
+      height: 900px
+      width: 310px
+      padding-left: 25px
+  .card-body
+      align-items: center
 
 .divForm
   max-width: 1166px
@@ -218,5 +290,18 @@ p
   .card
     width: 300px
   .divForm .card
-      width: 300px !important
+     display: none
+  .divFormMobile
+    flex-direction: column
+    display: flex
+    align-items: center
+  .form-controlMobile
+    width: 280px
+    min-height: 300px
+    border: none
+    background: #F7F1E8
+  .textarea
+    width: 300px
+    border-radius: 10px
+
 </style>

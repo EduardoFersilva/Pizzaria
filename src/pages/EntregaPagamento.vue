@@ -195,8 +195,22 @@
                 </div>
             </div>
 
-        <a type="button" class="btn btn-lg btnFinalizarPedido" >FINALIZAR PEDIDO</a>
+            <div>
+                <a type="button" class="btn btn-lg btnFinalizarPedido" @click="openModal" >FINALIZAR PEDIDO</a>
+
+            <div
+            v-if="loading"
+            class="spinner-border text-danger spinner" role="status">
+            </div>
+
+            </div>
+
         </div>
+
+    <modal
+     v-if="showModal"
+     @overlay:click="showModal = false"
+    />
 
     </main>
 </template>
@@ -204,12 +218,14 @@
 <script>
 import CustomInput from '../components/CustomInput.vue'
 import CardSelect from '../components/CardSelect.vue'
+import Modal from '../components/Modal.vue'
 import axios from 'axios'
 
 export default {
   components: {
     CustomInput,
-    CardSelect
+    CardSelect,
+    Modal
   },
   data() {
     return {
@@ -221,7 +237,8 @@ export default {
       address: '',
       neighborhood: '',
       loading: false,
-      message: ''
+      message: '',
+      showModal: false
     }
   },
   methods: {
@@ -251,6 +268,9 @@ export default {
     },
     selectCardPay(card) {
       this.selectedCardPay = card
+    },
+    openModal() {
+      this.showModal = true
     }
   },
   computed: {

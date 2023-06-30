@@ -67,7 +67,9 @@ defineProps({
         <div class="linha"></div>
 
         <div class="politicas">
-        <p class="politicaPrivacidade" >Política de privacidade e cookies</p>
+        <router-link to="/politica-e-peivacidade">
+            <p class="politicaPrivacidade" >Política de privacidade e cookies</p>
+        </router-link>
         <p class="copyright">Copyright 2023. Senhora Pizza. Todos os direitos reservados. Desenvolvido por GLMR</p>
         </div>
 
@@ -163,6 +165,8 @@ li
     font-size: 15px
     line-height: 18px
     color: #FFFFFF
+a
+    text-decoration: none
 .copyright
     position: absolute
     width: 571px
