@@ -56,7 +56,7 @@ defineProps({
     </div>
 
     <div class="iconGrids">
-      <i class="bi bi-cart3 iconCartMobile " style="font-size:40px;"></i>
+      <a :href="actionUrl" class="bi bi-cart3 iconCartMobile " style="font-size:40px;"></a>
 
       <sidebar
         menu1="Cardápio"
@@ -148,6 +148,8 @@ li
     margin: 0 20px
     list-style: none
     cursor: pointer
+li:active
+  color: #009247
 
 a
   color: #000000

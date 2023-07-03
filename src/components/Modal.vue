@@ -12,6 +12,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'Modal'
 }
@@ -65,5 +66,9 @@ h1
     align-items: center
     justify-content: center
     background: #27B94A
+
+@media (max-width: 730px)
+    .modal
+        max-width: 90%
 
 </style>

@@ -4,20 +4,28 @@
 
 <template>
     <main>
-        <div>
+    <div class="cont">
     <h1>Entrega e pagamento</h1>
 
     <div class="inputInfo">
+        <h2>Informações</h2>
+
+        <div class="inputsName">
         <custom-input
         label="Nome"
         v-bind="name"
         type="text"
-        placeholder="" />
+        placeholder=""
+        :width="'310px'"
+        />
 
         <custom-input
         label="Telefone"
         type="number"
-        placeholder=""  />
+        placeholder=""
+        :width="'310px'"
+        />
+        </div>
     </div>
 
     <div class="cardGroup">
@@ -52,6 +60,7 @@
             placeholder=""
             value=""
             @input="searchAddress"
+            :width="'310px'"
             />
 
             <div
@@ -70,6 +79,7 @@
             placeholder=""
             value=""
             v-model="address"
+            :width="'310px'"
             />
 
             <custom-input
@@ -78,6 +88,7 @@
             placeholder=""
             value=""
             v-model="neighborhood"
+            :width="'310px'"
             />
         </div>
 
@@ -86,11 +97,13 @@
             label="Número"
             type="number"
             placeholder=""
+            :width="'310px'"
             />
             <custom-input
             label="Complemento"
             type="text"
             placeholder=""
+            :width="'310px'"
             />
             </div>
 
@@ -124,50 +137,55 @@
             label="Levar troco para"
             type="number"
             placeholder=""
+            :width="'310px'"
             />
         </div>
     </div>
 
         <div>
-        <div class="card mb-3 CardItem">
-            <div class=" g-0  CardContainer ">
-                <div class="col-md-3 imga" >
-                    <img src="../../public/imgs/pizza5.png" class="img-fluid rounded-start" alt="...">
+        <div class=" CardItem">
+                <div class="divImg" >
+                    <img src="../../public/imgs/pizza5.png" class="" alt="...">
                 </div>
-                <div class="col-md-8 imga">
+                <div class="">
                 <div class="card-body">
-                    <div class="pedido1">
+                    <div class="pedido">
 
                         <div class="divTitle">
                         <h5 class="card-title">Pizza Caprici</h5>
                         <p>Tamanho</p>
+                        <p class="pVar">8 pedaços</p>
                         <p>Quantidade</p>
+                        <p class="pVar">2</p>
                         <p>Observações</p>
+                        <p class="pVar">...</p>
                         </div>
                         <div>
                             <p class="pBorda">Borda</p>
+                            <p class="pVar">Sem borda</p>
                             <h3>R$ 120,00</h3>
                         </div>
                     </div>
                 </div>
                 </div>
-            </div>
         </div>
 
-        <div class="card mb-3 CardItem">
-                <div class=" g-0  CardContainer ">
-                    <div class="col-md-3 imga" >
-                        <img src="../../public/imgs/cocacola.png" class="img-fluid rounded-start imgBebida" alt="...">
+        <div class=" CardItem">
+                    <div class="divImg" >
+                        <img src="../../public/imgs/cocacola.png" class="" alt="...">
                     </div>
-                    <div class="col-md-8 imga">
+                    <div class="">
                     <div class="card-body">
-                        <div class="pedido1">
+                        <div class="pedido">
 
                             <div class="divTitle">
                             <h5 class="card-title">Coca-Cola</h5>
                             <p>Tamanho</p>
+                            <p class="pVar">600ml</p>
                             <p>Quantidade</p>
+                            <p class="pVar">1</p>
                             <p>Observações</p>
+                            ...
                             </div>
                             <div>
                                 <h3>R$ 20,00</h3>
@@ -175,10 +193,9 @@
                         </div>
                     </div>
                     </div>
-                </div>
             </div>
 
-            <div class="card mb-3 CardItem">
+            <div class="card mb-3 CardItemTotal">
                 <div class=" g-0  CardTotal  ">
                     <div class="card-body">
 
@@ -306,9 +323,10 @@ h1
     line-height: 47px
     color: #000000
 .inputInfo
+    margin-top: 50px
+.inputsName
     display: flex
-.enderecoEntrega
-    width: 670px
+
 .numero-e-complemento
     display: flex
 
@@ -324,7 +342,16 @@ h2
   font-weight: 900
   font-size: 20px
   line-height: 23px
-  color: #000000imgIcon
+  color: #000000
+  text-align: left
+h5
+    font-family: Roboto
+    font-size: 20px
+    font-weight: 900
+    line-height: 23px
+    letter-spacing: 0em
+    text-align: left
+
 .inputTroco
     label
     font-family: 'Roboto'
@@ -339,14 +366,29 @@ h2
     border-radius: 14px
     border: none
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3)
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 10px
+    margin: 30px 0
 .CardItem
     img
-        padding-top: 30px
-.CardContainer
+        height: 180px
+.CardItemTotal
+    width: 470px
+    border-radius: 14px
+    border: none
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3)
+    display: flex
+    justify-content: space-between
+    padding: 10px
+    margin: 30px 0
+.divImg
+    padding: 20px 0
     display: flex
     justify-content: center
     align-items: center
-    min-height: 300px
+    width: 180px
 
 .card-body
     display: flex
@@ -360,12 +402,14 @@ h2
     line-height: 27px
     text-align: right
     color: #DF3D29
-.pedido1
+    margin-top: 50px
+.pedido
     display: flex
     justify-content: space-between
-    align-items: center
-.imga
-    height: 180px
+    align-items: end
+    p
+        margin-bottom: 0
+
 .btnFinalizarPedido
     background: #009247
     border-radius: 60px
@@ -382,12 +426,16 @@ h2
     background: #009247
 
 .pBorda
-    margin-bottom: 3.5rem
     margin-top: 2rem
+.pVar
+    font-family: Roboto
+    font-size: 16px
+    font-weight: 400
+    line-height: 24px
+    letter-spacing: 0em
+    color: #8E8E8E
 .divTitle
-    padding-right: 60px
-.imgBebida
-    padding: 0 !important
+    padding-right: 30px
 .inputLoadingCep
     display: flex
     align-items: center
@@ -422,6 +470,7 @@ h2
 .CardTotal
     h5
         margin: 0
+
 .CardTotal
     .card-body
         flex-direction: column
@@ -444,4 +493,53 @@ h2
   background: #009247
   border-top-left-radius: 10px
   border-bottom-left-radius: 10px
+
+@media (max-width: 1250px)
+    main
+        flex-direction: column
+        align-items: center
+        justify-content: center
+    h1
+        text-align: center
+    .inputInfo
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+    .inputsName
+        flex-direction: column
+        align-items: center
+        justify-content: center
+    .cardGroup
+        align-items: center
+    .inputLoadingCep
+        justify-content: center
+    .inputsEndereco
+        flex-direction: column
+        align-items: center
+        justify-content: center
+    .numero-e-complemento
+        flex-direction: column
+        align-items: center
+        justify-content: center
+    .cont
+        width: 100%
+    .btnFinalizarPedido
+        float: none
+        margin-left:120px
+
+@media (max-width: 500px)
+    .CardItem
+        flex-direction: column
+        width: 300px
+    .CardItemTotal
+        flex-direction: column
+        width: 300px
+    .btnFinalizarPedido
+        margin-left: 35px
+
+@media (max-width: 400px)
+    h1
+        font-size: 30px
+
 </style>

@@ -190,9 +190,9 @@ p
     display: flex
     justify-content: space-between
     align-items: center
-    padding-top: 30px
+    padding-top: 10px
     h3
-        padding-top: 40px
+        padding-top: 10px
 .btnPedidos
     background: #009247
     border-radius: 60px
@@ -224,8 +224,8 @@ a
 .buttons
     display: flex
     justify-content: space-between
-    padding-top: 40px
-    padding-bottom: 40px
+    padding-top: 10px
+    padding-bottom: 10px
 .iconClose
     position: absolute
     top: 10px
@@ -256,21 +256,24 @@ a
 @media (max-width: 700px)
   .modal
     flex-direction: column
-    height: 700px
     align-items: stretch
     padding-left: 20px
   .divImg
-    padding-top: 30px
-    padding-bottom: 30px
+    padding-top: 10px
+    padding-bottom: 20px
     height: 30%
   .textarea
     width: 350px
+
+@media (max-height: 600px)
+  .modal
+    height: 500px
 
 @media (max-width: 500px)
   .buttons
     flex-direction: column
   .btnContinuar
-    margin-bottom: 20px
+    margin-bottom: 10px
   .quantPreco
     flex-direction: column
     align-items: stretch

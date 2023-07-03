@@ -70,4 +70,7 @@ input[type="number"]
     -moz-appearance: textfield
     appearance: textfield
 
+@media (max-width: 1250px)
+  .inputGroup
+    margin: 20px 0 20px 0
 </style>
