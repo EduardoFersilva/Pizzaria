@@ -116,8 +116,8 @@ export default {
           image: './imgs/pizza2.png'
         }
       ],
-      pizzaImageUrl: '/public/imgs/pizzaNapolitana.png',
-      bandeiraImageUrl: '/public/imgs/bandeira.png'
+      pizzaImageUrl: '/imgs/pizzaNapolitana.png',
+      bandeiraImageUrl: '/imgs/bandeira.png'
     }
   },
   computed: {
