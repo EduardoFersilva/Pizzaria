@@ -91,12 +91,12 @@ p
     font-size: 16px
     line-height: 21px
     color: #000000
-.radio
-  margin-left: 35px
 
 @media (max-width: 680px)
   .card
     width: 400px
+  p
+    font-size: 10px
 
 @media (max-width: 420px)
   .card

@@ -77,8 +77,8 @@ export default {
       cards: [
 
       ],
-      pizzaImageUrl: '/public/imgs/pizzaNapolitana.png',
-      bandeiraImageUrl: '/public/imgs/bandeira.png'
+      pizzaImageUrl: './imgs/pizzaNapolitana.png',
+      bandeiraImageUrl: './imgs/bandeira.png'
     }
   },
   computed: {

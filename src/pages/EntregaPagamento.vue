@@ -32,7 +32,7 @@
             <h2>Retirada ou Entrega</h2>
 
             <card-select
-            imageUrl="../../public/imgs/retirada.png"
+            imageUrl="./imgs/retirada.png"
             title="Retirada no balcão"
             description="Rua Sete de Setembro, 182 Vila Alzira Santo André - SP"
             :selected="isPickUp"
@@ -41,7 +41,7 @@
             />
 
             <card-select
-            imageUrl="../../public/imgs/entrega-rapida.png"
+            imageUrl="./imgs/entrega-rapida.png"
             title="Entrega"
             description="R$ 5,00"
 
@@ -113,7 +113,7 @@
             <h2>Forma de pagamento</h2>
 
             <card-select
-            imageUrl="../../public/imgs/cartao.png"
+            imageUrl="./imgs/cartao.png"
             title="Cartão de Crédito"
             description=""
             :v-model="opcaoSelecionada"
@@ -123,7 +123,7 @@
             />
 
             <card-select
-            imageUrl="../../public/imgs/dinheiro.png"
+            imageUrl="./imgs/dinheiro.png"
             title="Dinheiro"
             description=""
             :v-model="opcaoSelecionada"

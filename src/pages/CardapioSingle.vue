@@ -89,7 +89,7 @@
 
     <modal-pedido
      v-if="showModal"
-     image-url="../../public/imgs/pizza5.png"
+     image-url="./imgs/pizza5.png"
      title="Pizza Caprici"
      info1="8 pedaços"
      info2="sem borda"
