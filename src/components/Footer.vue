@@ -104,7 +104,7 @@ export default {
     justify-content: space-around
     align-items: center
 .blackFooter
-    background-image: url(./imgs/imageFooter.jpeg)
+    background-image: url('../../public/imgs/imageFooter.jpeg')
     background-size: cover
     width: 100%
     height: 440px
