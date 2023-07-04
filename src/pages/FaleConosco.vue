@@ -110,7 +110,7 @@
         <div class="textarea">
             <h2>Mensagem</h2>
             <div class="input-group">
-                <textarea class="form-controlMobile"
+                <textarea class="TextareaMobile"
                 aria-label="With textarea"
                 placeholder=""
                 :required="true">
@@ -205,7 +205,7 @@ p
       width: 310px
       padding-left: 25px
   .card-body
-      align-items: center
+    justify-content: flex-start
 
 .divForm
   max-width: 1166px
@@ -226,7 +226,7 @@ p
     min-height: 600px
   .card-body
     justify-content: flex-start
-    padding: 0 20px 0 30px
+    padding: 30px
 
 .divInputDados
   display: flex
@@ -251,8 +251,15 @@ p
 .btnEnviar:hover
     transform: scale(1.04)
     background: #FC9D0E
+.TextareaMobile
+  min-height: 300px
+  background: #F7F1E8
+  width: 300px
+  border: none
+  border-radius: 10px
+  margin-right: 22px
 
-@media (max-width: 1195px)
+@media (max-width: 1250px)
   .LocPhone
     flex-direction: column
   .divPhone
@@ -263,12 +270,13 @@ p
     flex-direction: column
     align-items: center
   .divForm
+    width: 90%
     .card
       height: 900px
-      width: 568px
-      padding-left: 25px
+      width: 100%
     .card-body
       align-items: center
+      padding: 0
   .input-group
     width: 300px
     margin-right: 30px
@@ -281,11 +289,22 @@ p
   p
     text-align: center
     width: 90%
+  .form-control
+    margin-left: 30px
+
+  .divForm
+    .textarea
+      display: flex
+      flex-direction: column
+      align-items: center
+
 @media (max-width: 600px)
   .card
     width: 400px
   .divForm .card
       width: 400px !important
+      padding-left: 0px
+
 @media (max-width: 420px)
   .card
     width: 300px
@@ -295,17 +314,7 @@ p
     flex-direction: column
     display: flex
     align-items: center
-  .form-controlMobile
-    width: 280px
-    min-height: 300px
-    border: none
-    background: #F7F1E8
-  .textarea
-    width: 300px
-    border-radius: 10px
-
-@media (max-width: 335px)
-  .divInputDados
-    width: 300px
+    .card
+      padding-left: 0
 
 </style>
