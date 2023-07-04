@@ -118,23 +118,28 @@ export default {
       productItemsCircle: [
         {
           title: 'Refrigerantes',
-          image: './imgs/refrigerantes.png'
+          image: './imgs/refrigerantes.png',
+          action: '/#/refrigerantes'
         },
         {
           title: 'Cervejas',
-          image: './imgs/cervejas.png'
+          image: './imgs/cervejas.png',
+          action: '/#/cervejas'
         },
         {
           title: 'Sucos',
-          image: './imgs/sucos.png'
+          image: './imgs/sucos.png',
+          action: '/#/sucos'
         },
         {
           title: 'Vinhos',
-          image: './imgs/vinhos.png'
+          image: './imgs/vinhos.png',
+          action: '/#/vinhos'
         },
         {
           title: 'Drinks',
-          image: './imgs/drinks.png'
+          image: './imgs/drinks.png',
+          action: '/#/drinks'
         }
       ]
     }

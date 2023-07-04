@@ -16,10 +16,12 @@ defineProps({
     <div class="footer">
 
         <div class="buttonLogo">
+        <router-link to="/">
         <logo
         title="SENHORA"
         subtitle="PIZZA"
         />
+        </router-link>
 
         <a
         :href="`https://api.whatsapp.com/send/?phone=${whatsNumber}`" target="_blank"
@@ -32,12 +34,12 @@ defineProps({
         </div>
 
         <div class="list">
-             <ul>
-              <li>Cardápio</li>
-              <li>Promoções</li>
-              <li>Sobre nós</li>
-              <li>Fale conosco</li>
-            </ul>
+    <ul>
+      <li><router-link to="/pizzas-salgadas">Cardápio</router-link></li>
+      <li><router-link to="/promoções">Promoções</router-link></li>
+      <li><router-link to="/sobre">Sobre nós </router-link></li>
+      <li><router-link to="/fale-conosco">Fale conosco</router-link></li>
+    </ul>
         </div>
 
         <div  class="enderecoAtendimento" >
@@ -102,7 +104,7 @@ export default {
     justify-content: space-around
     align-items: center
 .blackFooter
-    background-image: url(./public/imgs/imageFooter.jpeg)
+    background-image: url(./imgs/imageFooter.jpeg)
     background-size: cover
     width: 100%
     height: 440px
@@ -167,6 +169,7 @@ li
     color: #FFFFFF
 a
     text-decoration: none
+    color: #FFFFFF
 .copyright
     position: absolute
     width: 571px
@@ -203,7 +206,6 @@ a
         margin-top: 460px
     .politicaPrivacidade
         text-align: center
-        margin: 50px 0 0 0
         position: static
         order: 1
     .copyright

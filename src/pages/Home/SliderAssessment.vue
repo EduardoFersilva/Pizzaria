@@ -91,13 +91,13 @@ export default {
 .cards-wrapper
   display: flex
   transition: transform 0.3s ease
-  width: 97%
+  width: 100%
+  justify-content: center
 
 .indicators
   display: flex
   justify-content: center
   margin-bottom: 20px
-  margin-right: 10px
 
 .indicator
   width: 10px

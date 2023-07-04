@@ -22,6 +22,7 @@ defineProps({
             :key="index"
             :image-url="card.image"
             :title="card.title"
+            :action-url="card.action"
           />
         </div>
       </div>
@@ -114,7 +115,7 @@ p
   .indicators
     display: flex
   .slider
-        padding-bottom: 50px
+        padding-bottom: 100px
 
 @media (max-width: 1040px)
     .slider

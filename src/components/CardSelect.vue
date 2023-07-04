@@ -97,6 +97,7 @@ p
     width: 400px
   p
     font-size: 10px
+    width: 150px
 
 @media (max-width: 420px)
   .card

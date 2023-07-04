@@ -7,6 +7,10 @@ defineProps({
   title: {
     type: String,
     required: true
+  },
+  actionUrl: {
+    type: String,
+    required: true
   }
 
 })
@@ -14,8 +18,10 @@ defineProps({
 
 <template>
     <div class="card">
+      <a :href="actionUrl">
         <img :src="imageUrl" :alt="title">
         <h3>{{ title }}</h3>
+      </a>
     </div>
 </template>
 
@@ -52,6 +58,7 @@ export default {
     line-height: 27px
     display: flex
     align-items: center
+    justify-content: center
     text-align: center
     color: #000000
 .card p
@@ -59,7 +66,8 @@ export default {
 .card.active
     opacity: 1
 .card img
-  width: 141px
   height: 192px
   margin-top: 125px
+a
+  text-decoration: none
 </style>
