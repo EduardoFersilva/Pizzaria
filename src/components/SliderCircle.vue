@@ -26,10 +26,12 @@ defineProps({
         </div>
       </div>
     </div>
+     <!-- This will work too
     <div class="indicators">
         <span v-for="(card, index) in cards" :key="index" class="indicator" :class="{ active: activeIndex === index }"
                 @click="goToCard(index)"></span>
         </div>
+        -->
   </div>
 </template>
 
@@ -53,29 +55,10 @@ export default {
       return this.cards.slice(0, this.cardsPerSlide)
     }
   },
-  mounted() {
-    this.updateCardsPerSlide()
-    window.addEventListener('resize', this.updateCardsPerSlide)
-  },
-  beforeUnmount() {
-    window.removeEventListener('resize', this.updateCardsPerSlide)
-  },
   methods: {
     goToCard(index) {
       this.activeIndex = index
       console.log(goToCard)
-    },
-    updateCardsPerSlide() {
-      const screenWidth = window.innerWidth
-      if (screenWidth <= 650) {
-        this.cardsPerSlide = 1
-      } else if (screenWidth <= 1040) {
-        this.cardsPerSlide = 3
-      } else if (screenWidth <= 1360) {
-        this.cardsPerSlide = 4
-      } else {
-        this.cardsPerSlide = 5
-      }
     }
   }
 }
@@ -101,9 +84,13 @@ h1
     align-items: center
     justify-content: center
 .card-container
-   height: 330px
+   min-height: 330px
 .cards-wrapper
     display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    gap: 90px 0
     transition: transform 0.3s ease
 
 .indicators
@@ -126,6 +113,8 @@ p
 @media (max-width: 1360px)
   .indicators
     display: flex
+  .slider
+        padding-bottom: 50px
 
 @media (max-width: 1040px)
     .slider

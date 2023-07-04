@@ -170,6 +170,10 @@ p
         text-align: center
         font-size: 35px
 
+@media (max-width:420px)
+    .receita
+        padding-top: 450px
+
 @media (max-width: 360px)
     .imgPizzaNapolitana
         width: 320px !important
